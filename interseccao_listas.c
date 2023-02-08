@@ -4,88 +4,49 @@
 #include <stdlib.h>
 #include <string.h>
 
-int tamanho (int max_tam, int array[])
+int tamanho (int max_tam, int vetor[])
 {
-    int i = 0;
+    int indice = 0;
 
-    while ((i < max_tam) && (array[i] != 0))
-        i += 1;
+    while ((indice < max_tam) && (vetor[indice] != 0))
+        indice += 1;
 
-    return i;
+    return indice - 1;
 }
 
 int circular(int v1[], int v2[], int i, int j)
 {
-    /*int tamanho = 0;
-    if(i >= j)
-    {
-        tamanho = i - 1;
-    }
-    else
-    {
-        tamanho = j - 1;
-    }
-    printf("esse é o tamanho q ta indo %d", tamanho);
-
-    // inicializar vetor todo c 0 int v3[tamanho] = {0};
  
     if(i >= j)
     {
     
-        for(int x = 0; x <= i; x++)
+        for(int x = 0; x <= tamanho(10,v1); x++)
         {
-            for(int y = 0; y <= j; y++)
+            for(int y = 0; y <= tamanho(10,v2); y++)
             {
                 if(v1[x] == v2[y])
                 {
-                    v3[x] == v1[x];
+                    printf("%d ", v1[x]);
                 }
             }
         }
     }
     else
     {
-    
 
-        for(int x = 0; x <= j; x++)
+        for(int x = 0; x <= tamanho(10,v2); x++)
         {
-            for(int y = 0; y <= i; y++)
+            for(int y = 0; y <= tamanho(10,v1); y++)
             {
                 if(v2[x] == v1[y])
                 {
-                    v3[x] == v2[x];
+                    printf("%d ", v2[x]);
                 }
             }
         }
     }
     
-    for(int p = 0; p <= tamanho; p++)
-    {
-        printf("%d ", v3[p]);
-    }
-
-   */
-
-    int aux[10] = {0};
     
-    int count_aux = 0;
-
-    for (int i = 0; i < tamanho(10, v1); i++)
-    {
-        for (int j = 0; j < tamanho(10, v2); j++)
-        {
-            if (v1[i] == v2[j])
-            {
-                aux[count_aux] = v1[i];
-                count_aux += 1;
-            }
-        }
-        
-    }
-    
-
-    for (int i = 0; i < tamanho(10, aux); i++)
-        printf("pos %d = %d\n", i, aux[i]);
 }
 
 int main()
