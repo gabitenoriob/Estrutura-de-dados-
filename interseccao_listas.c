@@ -4,11 +4,11 @@
 #include <stdlib.h>
 #include <string.h>
 
-int tamanho (int max_tam, int vetor[])
+int tamanho (int limite, int vetor[])
 {
     int indice = 0;
 
-    while ((indice < max_tam) && (vetor[indice] != 0))
+    while ((indice < limite) && (vetor[indice] != 0))
         indice += 1;
 
     return indice - 1;
